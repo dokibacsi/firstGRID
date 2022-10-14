@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&display=swap');
+
 /*
 NAV-background : #282828;
 Icons / Lines : #ff0511;
@@ -19,6 +23,7 @@ Icons / Lines : #ff0511;
     color: white;
     background-color: #282828;
     margin: 0;
+    font-family: 'Francois One';
 }
 
 #menu a{
@@ -47,26 +52,37 @@ Icons / Lines : #ff0511;
     display: grid;
     grid-template-areas: 'menus menus menus'
                          'focim focim focim'
-                         'tbox tbox tbox';
+                         'tartalom tartalom tartalom';
     
 }
 
 #tartalom-fooldal h1{
     grid-area: focim;
+    font-family: 'Fredoka One';
     color: white;
     font-size: 30pt;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #tartalmak{
+    margin: auto;
+    grid-area: tartalom;
     max-width: 900px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 #tartalmak .tartalombox{
     max-width: 300px;
     margin: auto;
     padding: 20px;
-    border-right: 2px solid red;
     margin: 20px;
+}
+
+#kozepso{
+    border-right: 2px solid red;
+    border-left: 2px solid red;
 }
 
 .tartalombox img{
@@ -75,4 +91,28 @@ Icons / Lines : #ff0511;
 
 .tartalombox ul li{
     text-align: left;
+    margin-top: 10px;
+    font-family: 'Roboto Condensed';
+}
+
+/*Egyediség: scrollbar*/
+
+
+body::-webkit-scrollbar-track
+{
+	border-radius: 5px;
+    max-height: 10%;
+}
+
+body::-webkit-scrollbar
+{
+	width: 7px;
+    height: 10px;
+    background-color: #282828;
+}
+
+body::-webkit-scrollbar-thumb
+{
+	border-radius: 5px;
+	background-color: red;
 }
