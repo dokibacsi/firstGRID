@@ -1,0 +1,78 @@
+/*
+NAV-background : #282828;
+Icons / Lines : #ff0511;
+*/
+
+
+/*Főoldal*/
+
+/*Minden margin 0-ra állítás: */
+
+*{
+    margin: 0;
+}
+
+/*Menü kialakítása*/
+
+#menu{
+    grid-area: menus;
+    color: white;
+    background-color: #282828;
+    margin: 0;
+}
+
+#menu a{
+    color: white;
+    text-decoration: none;
+}
+
+#menu ul{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin: 10px;
+    max-width: 100px;
+}
+
+#menu li{
+    margin: 10px 0px 10px 50px;
+}
+
+/*Főoldal tartalmának kialakítása*/
+
+#tartalom-fooldal{
+    background: #282828;
+    color: white;
+    text-align: center;
+    display: grid;
+    grid-template-areas: 'menus menus menus'
+                         'focim focim focim'
+                         'tbox tbox tbox';
+    
+}
+
+#tartalom-fooldal h1{
+    grid-area: focim;
+    color: white;
+    font-size: 30pt;
+}
+
+#tartalmak{
+    max-width: 900px;
+}
+
+#tartalmak .tartalombox{
+    max-width: 300px;
+    margin: auto;
+    padding: 20px;
+    border-right: 2px solid red;
+    margin: 20px;
+}
+
+.tartalombox img{
+    max-width: 150px;
+}
+
+.tartalombox ul li{
+    text-align: left;
+}
