@@ -16,6 +16,10 @@ Icons / Lines : #ff0511;
     margin: 0;
 }
 
+body{
+    background-color: black;
+}
+
 /*Menü kialakítása*/
 
 #menu{
@@ -23,6 +27,7 @@ Icons / Lines : #ff0511;
     color: white;
     background-color: #282828;
     margin: 0;
+    padding: 1px;
     font-family: 'Francois One';
 }
 
@@ -95,6 +100,61 @@ Icons / Lines : #ff0511;
     font-family: 'Roboto Condensed';
 }
 
+
+/*
+    second.html
+*/
+
+#tartalom{
+    background-color: black;
+    width: 100%;
+    color: white;
+    text-align: center;
+    display: grid;
+    grid-template-areas: 'menus menus menus'
+                         'secondtartalmak secondtartalmak secondtartalmak';
+}
+
+#secondtartalmak{
+    margin: auto;
+    max-width: 1800px;
+    display: grid;
+    grid-template-areas: 'szoveg kep';
+}
+
+img{
+    grid-area: kep;
+    width: 400px;
+    margin-top: 50px;
+}
+
+#szoveg{
+    grid-area: szoveg;
+    max-width: 600px;
+    margin-left: 50px;
+    margin-right: 200px;
+}
+
+#szoveg h1{
+    font-family: 'Fredoka One';
+    color: white;
+    font-size: 30pt;
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 400px;
+    text-align: left;
+    letter-spacing: 2px;
+    border-bottom: 2px solid red;
+}
+
+#szoveg p{
+    text-align: justify;
+    width: 600px;
+    margin-top: 30px;
+    margin-left: 50px;
+    font-family: 'Roboto Condensed';
+}
+
 /*Egyediség: scrollbar*/
 
 
@@ -107,7 +167,6 @@ body::-webkit-scrollbar-track
 body::-webkit-scrollbar
 {
 	width: 7px;
-    height: 10px;
     background-color: #282828;
 }
 
