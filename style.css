@@ -95,9 +95,16 @@ body{
 }
 
 .tartalombox ul li{
+    list-style: none;
     text-align: left;
     margin-top: 10px;
     font-family: 'Roboto Condensed';
+}
+
+.tartalombox li::before{
+    content: ">";
+    padding-right: 7px;
+    color: orange;
 }
 
 
@@ -110,9 +117,10 @@ body{
     width: 100%;
     color: white;
     text-align: center;
+    margin-top: 200px;
     display: grid;
-    grid-template-areas: 'menus menus menus'
-                         'secondtartalmak secondtartalmak secondtartalmak';
+    grid-template-areas: 'secondtartalmak secondtartalmak secondtartalmak';
+    
 }
 
 #secondtartalmak{
@@ -166,6 +174,8 @@ img{
 #startalom{
     margin: auto;
     color: white;
+    margin-top: 200px;
+    margin-bottom: 200px;
 }
 
 #salestart{
@@ -258,11 +268,49 @@ body::-webkit-scrollbar-track
 body::-webkit-scrollbar
 {
 	width: 7px;
-    background-color: #282828;
+    background-color: black;
 }
 
 body::-webkit-scrollbar-thumb
 {
 	border-radius: 5px;
 	background-color: red;
+}
+
+@media screen and (max-width: 400px){
+    #menu ul{
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 10px;
+        margin-left: 5px;
+        max-width: 50px;
+    }
+
+    #menu li{
+        margin: 10px 0px 10px 10px;
+    }
+
+    #tartalom-fooldal h1{
+        color: white;
+        font-size: 25pt;
+        width: 400px;
+    }
+
+    #tartalmak{
+        margin: auto;
+        grid-area: tartalom;
+        max-width: 300px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    #tartalmak .tartalombox{
+        max-width: 300px;
+        margin: auto;
+        padding: 20px;
+        margin: 20px;
+        border-left: 2px solid red;
+        border-right: 2px solid red;
+    }
 }
