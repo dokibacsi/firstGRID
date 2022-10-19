@@ -313,4 +313,59 @@ body::-webkit-scrollbar-thumb
         border-left: 2px solid red;
         border-right: 2px solid red;
     }
+
+    #tartalom{
+        background-color: black;
+        width: 100%;
+        max-width: 200px;
+        color: white;
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    #secondtartalmak{
+        margin: auto;
+        max-width: 100px;
+        display: grid;
+        grid-template-areas: 'szoveg'
+                             'kep';
+    }
+
+    img{
+        grid-area: kep;
+        width: 300px;
+        margin-left: 25px;
+        margin-top: 50px;
+        
+    }
+    
+    #szoveg{
+        grid-area: szoveg;
+        max-width: 100px;
+        margin: 0;
+    }
+    
+    #szoveg h1{
+        grid-area: szoveg_focim;
+        font-family: 'Fredoka One';
+        color: white;
+        font-size: 25pt;
+        margin-left: -25px;
+        text-align: center;
+        letter-spacing: 2px;
+    }
+    
+    #szoveg p{
+        grid-area: szoveg_bekezdes;
+        text-align: justify;
+        width: 300px;
+        margin-left: 25px;
+        font-family: 'Roboto Condensed';
+    }
+    
+    #elsobekezdes{
+        padding-top: 20px;
+        margin-bottom: 20px;
+        border-top: 2px solid red;
+    }
 }
