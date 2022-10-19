@@ -268,7 +268,7 @@ body::-webkit-scrollbar-track
 body::-webkit-scrollbar
 {
 	width: 7px;
-    background-color: black;
+    background: none;
 }
 
 body::-webkit-scrollbar-thumb
@@ -334,7 +334,7 @@ body::-webkit-scrollbar-thumb
     img{
         grid-area: kep;
         width: 300px;
-        margin-left: 25px;
+        margin-left: 30px;
         margin-top: 50px;
         
     }
@@ -350,7 +350,7 @@ body::-webkit-scrollbar-thumb
         font-family: 'Fredoka One';
         color: white;
         font-size: 25pt;
-        margin-left: -25px;
+        margin-left: -20px;
         text-align: center;
         letter-spacing: 2px;
     }
@@ -359,7 +359,7 @@ body::-webkit-scrollbar-thumb
         grid-area: szoveg_bekezdes;
         text-align: justify;
         width: 300px;
-        margin-left: 25px;
+        margin-left: 30px;
         font-family: 'Roboto Condensed';
     }
     
