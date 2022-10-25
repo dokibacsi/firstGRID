@@ -48,7 +48,9 @@ body{
     margin: 10px 0px 10px 50px;
 }
 
-/*Főoldal tartalmának kialakítása*/
+/* 
+    1. rész 
+*/
 
 #tartalom-fooldal{
     background: #282828;
@@ -109,7 +111,7 @@ body{
 
 
 /*
-    career.html
+    2. rész
 */
 
 #tartalom{
@@ -168,7 +170,7 @@ img{
 }
 
 /*
-    contact.html
+    3. rész
 */
 
 #startalom{
@@ -277,11 +279,17 @@ body::-webkit-scrollbar-thumb
 	background-color: red;
 }
 
-@media screen and (max-width: 400px){
+/*Reszponzivitás*/
+
+@media screen and (max-width: 600px) {
+    
+    /*
+        1. rész
+    */
     #menu ul{
         list-style-type: none;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
         margin: 10px;
         margin-left: 5px;
         max-width: 50px;
@@ -289,83 +297,140 @@ body::-webkit-scrollbar-thumb
 
     #menu li{
         margin: 10px 0px 10px 10px;
+        text-align: left;
+        font-size: 20pt;
+    }
+
+    #tartalom-fooldal{
+        text-align: center;
+        display: grid;
+        grid-template-areas: 'menus'
+                             'focim'
+                             'tartalom';
+        
     }
 
     #tartalom-fooldal h1{
-        color: white;
         font-size: 25pt;
-        width: 400px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: -75px;
     }
-
+    
     #tartalmak{
         margin: auto;
         grid-area: tartalom;
-        max-width: 300px;
+        max-width: 400px;
         display: grid;
+        margin-left: 50px;
         grid-template-columns: 1fr;
     }
 
-    #tartalmak .tartalombox{
-        max-width: 300px;
+    .tartalombox img{
         margin: auto;
-        padding: 20px;
-        margin: 20px;
-        border-left: 2px solid red;
-        border-right: 2px solid red;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
+
+    #tartalmak .tartalombox{
+        max-width: 400px;
+    }
+
+    #kozepso{
+        border: none;
+    }
+
+    /*
+        2. rész
+    */
 
     #tartalom{
         background-color: black;
         width: 100%;
-        max-width: 200px;
         color: white;
         text-align: center;
-        margin-top: 100px;
+        margin-top: 200px;
+        display: grid;
+        grid-template-areas: 'secondtartalmak secondtartalmak secondtartalmak';
+        
     }
-
+    
     #secondtartalmak{
         margin: auto;
-        max-width: 100px;
+        max-width: 600px;
         display: grid;
         grid-template-areas: 'szoveg'
                              'kep';
     }
 
-    img{
-        grid-area: kep;
-        width: 300px;
-        margin-left: 30px;
-        margin-top: 50px;
-        
-    }
-    
     #szoveg{
         grid-area: szoveg;
-        max-width: 100px;
-        margin: 0;
+        max-width: 600px;
+        margin-left: 50px;
+        margin-right: 200px;
     }
     
     #szoveg h1{
-        grid-area: szoveg_focim;
         font-family: 'Fredoka One';
         color: white;
-        font-size: 25pt;
-        margin-left: -20px;
+        font-size: 30pt;
+        margin-top: 50px;
+        margin-left: 25px;
+        width: 400px;
         text-align: center;
         letter-spacing: 2px;
     }
     
     #szoveg p{
-        grid-area: szoveg_bekezdes;
         text-align: justify;
-        width: 300px;
-        margin-left: 30px;
+        width: 400px;
+        margin-left: 25px;
         font-family: 'Roboto Condensed';
     }
+
+    img{
+        grid-area: kep;
+        width: 350px;
+        margin-top: 50px;
+        margin-left: -125px;
+    }
+
+    /*
+        3. rész
+    */
+
+    #salestart{
+        max-width: 600px;
+        display: grid;
+        grid-template-areas: 'salesfocim'  
+                             'salesszoveg'
+                             'salesbox';
+    }
+
+    #salestart h1{
+        grid-area: salesfocim;
+        font-family: 'Fredoka One'; 
+        margin: auto;
+        max-width: 500px;
+        letter-spacing: 3px;
+        text-align: center;
+        border-bottom: 2px solid red;
+        margin-bottom: 10px;
+        margin-left: 80px;
+    }
     
-    #elsobekezdes{
-        padding-top: 20px;
-        margin-bottom: 20px;
-        border-top: 2px solid red;
+    #salestart p{
+        max-width: 450px;
+        grid-area: salesszoveg;
+        margin: auto;
+        text-align: center;
+        margin-bottom: 50px;
+        margin-left: -10px;
+    }
+
+    .salesbox{
+        width: 200px;
+        margin: auto;
+        margin-left: 115px;
     }
 }
